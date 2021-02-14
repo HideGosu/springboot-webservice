@@ -1,0 +1,52 @@
+// build.gradle : 이 프로젝트의 플러그인 의조선 관리를 위한 설정
+buildscript {
+    // ext : build.gradle의 전역변수
+    ext {
+        springBootVersion = '2.1.7.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+/*
+    플러그인 의존성 적용
+    스프링부트 필수 플러그인
+    java/eclipse/org.springframework.boot/io.spring.dependency-management
+ */
+// io.spring.dependency-management : 스프링 부트의 의존성을 관리해 주는 플러그인
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+/*
+    repositories : 각종 의존성 (라이브러리)들을 어떤 원격 저장소에서 받을지 설정
+        mavenCentral : 이전부터 많이 사용하던 저장소 본인이 만든 라이브러리를 업로드하기 위해서 많은과정과 설정이 필용하다.
+        jcenter      : 문제점을 개선하여 라이브러리를 업로드가 간단, jcenter에 업로드시 mavenCenteral에도 업로드 자동화
+*/
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+/*
+    dependencies : 프로젝트 개발에 필요한 의존성들을 선언하는 곳
+ */
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+//    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+//    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
