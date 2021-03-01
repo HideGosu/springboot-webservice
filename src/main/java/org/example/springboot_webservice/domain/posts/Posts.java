@@ -3,13 +3,14 @@ package org.example.springboot_webservice.domain.posts;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.example.springboot_webservice.domain.BastTImeEtntity;
 
 import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor
 @Entity
-public class Posts {
+public class Posts extends BastTImeEtntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
