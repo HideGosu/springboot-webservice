@@ -3,7 +3,7 @@ package org.example.springboot_webservice.web.dto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.example.springboot_webservice.web.domain.posts.Posts;
+import org.example.springboot_webservice.domain.posts.Posts;
 
 @Getter
 @NoArgsConstructor

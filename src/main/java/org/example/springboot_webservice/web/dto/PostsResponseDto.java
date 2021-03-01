@@ -1,7 +1,7 @@
 package org.example.springboot_webservice.web.dto;
 
 import lombok.Getter;
-import org.example.springboot_webservice.web.domain.posts.Posts;
+import org.example.springboot_webservice.domain.posts.Posts;
 
 @Getter
 public class PostsResponseDto {

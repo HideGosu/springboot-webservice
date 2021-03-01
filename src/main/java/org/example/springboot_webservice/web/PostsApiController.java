@@ -1,7 +1,7 @@
 package org.example.springboot_webservice.web;
 
 import lombok.RequiredArgsConstructor;
-import org.example.springboot_webservice.service.posts.PostsService;
+import org.example.springboot_webservice.service.PostsService;
 import org.example.springboot_webservice.web.dto.PostsResponseDto;
 import org.example.springboot_webservice.web.dto.PostsSaveRequestDto;
 import org.example.springboot_webservice.web.dto.PostsUpdateRequestDto;

@@ -1,4 +1,4 @@
-package org.example.springboot_webservice.web.domain.posts;
+package org.example.springboot_webservice.domain.posts;
 
 import lombok.Builder;
 import lombok.Getter;

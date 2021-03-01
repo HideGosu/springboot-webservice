@@ -1,8 +1,8 @@
-package org.example.springboot_webservice.service.posts;
+package org.example.springboot_webservice.service;
 
 import lombok.RequiredArgsConstructor;
-import org.example.springboot_webservice.web.domain.posts.Posts;
-import org.example.springboot_webservice.web.domain.posts.PostsRepository;
+import org.example.springboot_webservice.domain.posts.Posts;
+import org.example.springboot_webservice.domain.posts.PostsRepository;
 import org.example.springboot_webservice.web.dto.PostsResponseDto;
 import org.example.springboot_webservice.web.dto.PostsSaveRequestDto;
 import org.example.springboot_webservice.web.dto.PostsUpdateRequestDto;
